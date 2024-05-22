@@ -1,0 +1,3 @@
+- [ ] Edge case handling, any button pressed after any
+- [ ] Save CSV File
+- [ ] Tab to plot the graph 
