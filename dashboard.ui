@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>605</height>
+    <width>1001</width>
+    <height>485</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -29,7 +29,7 @@
    <property name="minimumSize">
     <size>
      <width>1000</width>
-     <height>605</height>
+     <height>485</height>
     </size>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -242,12 +242,12 @@
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_5">
                <item>
-                <widget class="QLabel" name="label_35">
+                <widget class="QLabel" name="label_24">
                  <property name="styleSheet">
                   <string notr="true">color: rgb(252, 175, 62)</string>
                  </property>
                  <property name="text">
-                  <string>ENG OIL TEMP</string>
+                  <string>OIL TEMP</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -255,7 +255,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="eng_oil_temp">
+                <widget class="QLabel" name="coolant_temp">
                  <property name="font">
                   <font>
                    <pointsize>20</pointsize>
@@ -298,34 +298,6 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="label_36">
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(252, 175, 62)</string>
-                 </property>
-                 <property name="text">
-                  <string>FUEL RATE</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="fuel_rate">
-                 <property name="font">
-                  <font>
-                   <pointsize>20</pointsize>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>0.0</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item>
                 <widget class="QLabel" name="label_11">
                  <property name="styleSheet">
                   <string notr="true">color: rgb(252, 175, 62)</string>
@@ -340,34 +312,6 @@
                </item>
                <item>
                 <widget class="QLabel" name="fuel_inj">
-                 <property name="font">
-                  <font>
-                   <pointsize>20</pointsize>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>0.0</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_31">
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(252, 175, 62)</string>
-                 </property>
-                 <property name="text">
-                  <string>FUEL PRESSURE</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="fuel_pres">
                  <property name="font">
                   <font>
                    <pointsize>20</pointsize>
@@ -443,24 +387,6 @@
                  </property>
                  <property name="text">
                   <string>BRAKE</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_34">
-                 <property name="enabled">
-                  <bool>false</bool>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <pointsize>15</pointsize>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>ABS</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -719,34 +645,6 @@ border-radius: 2px;
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="label_37">
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(252, 175, 62)</string>
-                 </property>
-                 <property name="text">
-                  <string>ENGINE TORQUE</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="torque">
-                 <property name="font">
-                  <font>
-                   <pointsize>20</pointsize>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>0.0</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item>
                 <widget class="QLabel" name="label_33">
                  <property name="styleSheet">
                   <string notr="true">color: rgb(252, 175, 62)</string>
@@ -831,34 +729,6 @@ border-radius: 2px;
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="label_24">
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(252, 175, 62)</string>
-                 </property>
-                 <property name="text">
-                  <string>COOLANT TEMP</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_32">
-                 <property name="font">
-                  <font>
-                   <pointsize>20</pointsize>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>0.0</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item>
                 <spacer name="verticalSpacer_2">
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
@@ -898,24 +768,6 @@ border-radius: 2px;
                  </property>
                  <property name="text">
                   <string>KILL</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_15">
-                 <property name="font">
-                  <font>
-                   <pointsize>15</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true"/>
-                 </property>
-                 <property name="text">
-                  <string>CLUTCH</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -984,27 +836,6 @@ border-radius: 2px;
                  </property>
                  <property name="text">
                   <string>N</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="speed_val">
-                 <property name="font">
-                  <font>
-                   <pointsize>35</pointsize>
-                   <weight>50</weight>
-                   <italic>false</italic>
-                   <bold>false</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(233, 185, 110)</string>
-                 </property>
-                 <property name="text">
-                  <string>000</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>

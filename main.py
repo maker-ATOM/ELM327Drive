@@ -39,20 +39,15 @@ class OBDSniffGUI(QMainWindow, dashboard_ui.Ui_MainWindow):
 		self.rpm.setValue(int((infograph_data["rpm"] * 1000) / 12000))
 
 		self.speed.setValue(infograph_data["speed"])
-		self.speed_val.setText(infograph_data["speed"])
 
-		self.eng_oil_temp.setText(infograph_data["eng_oil_temp"])
-		self.air_fuel_ratio.setText(infograph_data["air_fuel_ratio"])
-		self.fuel_rate.setText(infograph_data["fuel_rate"])
-		self.fuel_inj.setText(infograph_data["fuel_inj"])
-		self.fuel_pres.setText(infograph_data["fuel_pres"])
-		self.battery.setText(infograph_data["battery"])
-		self.load.setText(infograph_data["load"])
-		self.torque.setText(infograph_data["torque"])
-		self.air_temp.setText(infograph_data["air_temp"])
-		self.air_press.setText(infograph_data["air_press"])
-		self.air_flow_rate.setText(infograph_data["air_flow_rate"])
-		self.coolant_temp.setText(infograph_data["coolant_temp"])
+		self.air_fuel_ratio.setText(str(infograph_data["air_fuel_ratio"]))
+		self.fuel_inj.setText(str(infograph_data["fuel_inj"]))
+		self.battery.setText(str(infograph_data["battery"]))
+		self.load.setText(str(infograph_data["load"]))
+		self.air_temp.setText(str(infograph_data["air_temp"]))
+		self.air_press.setText(str(infograph_data["air_press"]))
+		self.air_flow_rate.setText(str(infograph_data["air_flow_rate"]))
+		self.coolant_temp.setText(str(infograph_data["coolant_temp"]))
 
 	def start(self):
 		self.timer.start(50)

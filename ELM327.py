@@ -45,6 +45,7 @@ class ELM327:
 
 
 		except Exception as e:
+			print(e)
 			return CONNECT_ELM327_FAIL
 
 		# get any packet to connection with obd
@@ -98,13 +99,8 @@ class ELM327:
 
 		# Speed
 		speed = self.GetResponse(b'01 0D\r')
-		speed_val = int(speed.split[2], 16)
+		speed_val = int(speed.split()[2], 16)
 		infograph_data["speed"] = speed_val
-
-		# Eng Oil Temp
-		eng_oil_temp = self.GetResponse(b'01 5C\r')
-		eng_oil_temp_val = int(eng_oil_temp.split[2], 16) - 40
-		infograph_data["eng_oil_temp"] = eng_oil_temp_val
 
 		# Air Fuel Ratio
 		air_fuel_ratio = self.GetResponse(b'01 44\r')
@@ -113,13 +109,6 @@ class ELM327:
 		air_fuel_ratio_val = 0.0078125 * a + 0.000030518 * b
 		infograph_data["air_fuel_ratio"] = air_fuel_ratio_val
 
-		# Fuel Rate
-		fuel_rate = self.GetResponse(b'01 5E\r')
-		a = int(rpm.split()[2], 16)
-		b = int(rpm.split()[3], 16)
-		fuel_rate_val = 12.8 * a + 0.05 * b
-		infograph_data["fuel_rate"] = fuel_rate_val
-
 		# Fuel Injection Timing
 		fuel_inj = self.GetResponse(b'01 5D\r')
 		a = int(rpm.split()[2], 16)
@@ -127,22 +116,13 @@ class ELM327:
 		fuel_inj_val = (2 * a + 0.0078125 * b) - 210
 		infograph_data["fuel_inj"] = fuel_inj_val 
 
-		# Fuel Pressure 
-		fuel_pres = self.GetResponse(b'01 0A\r')
-		fuel_pres_val = 3 * int(fuel_pres.split()[2], 16)
-		infograph_data["fuel_pres"] = fuel_pres_val
-
 		# Battery
 		battery = self.GetResponse(b'AT RV\r')
-		infograph_data["battery"] = int(battery)
+		infograph_data["battery"] = float(battery[:-3])
 
 		# Engine Load
 		load = self.GetResponse(b'01 04\r')
-		infograph_data["load"] = 0.0078125 * int(load.split()[2])
-
-		# Engine Torque
-		torque = self.GetResponse(b'01 61\r')
-		infograph_data["torque"] = int(torque.split()[2], 16) - 125
+		infograph_data["load"] = 0.0078125 * int(load.split()[2], 16)
 
 		# Air Temp
 		air_temp = self.GetResponse(b'01 0F\r')
@@ -163,6 +143,7 @@ class ELM327:
 		coolant_temp = self.GetResponse(b'01 05\r')
 		infograph_data["coolant_temp"] = int(coolant_temp.split()[2], 16) - 40
 
+		infograph_data = {key: round(value, 2) for key, value in infograph_data.items()}
 
 		return infograph_data
 
