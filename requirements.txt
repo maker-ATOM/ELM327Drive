@@ -1,3 +1,3 @@
-serial
+pyserial
 pyqt5
 pyqt-tools
