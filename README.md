@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-Plug ELM327 module...
+Plug [ELM327](https://www.elm327.com/) module...
 
 ```
 +--------+  USB  +------+  OBDII  +-------+ 
@@ -23,7 +23,7 @@ Plug ELM327 module...
 ```
 git clone git@github.com:maker-ATOM/ELM327Drive.git
 
-cd ELM327Drive
+cd ELM327Drive/
 
 python3 main.py
 ```
