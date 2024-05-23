@@ -4,7 +4,7 @@ Tool to tap into OBDII port of your vehicle to monitor its data.
 
 https://github.com/maker-ATOM/ELM327Drive/assets/87944335/306df5e6-f8a4-40a5-bcec-2e5cdeaec0f1
 
-## Dependencies
+## Install Dependencies
 
 ```
 pip install -r requirements.txt
@@ -23,7 +23,7 @@ Plug [ELM327](https://www.elm327.com/) module...
 ```
 git clone git@github.com:maker-ATOM/ELM327Drive.git
 
-cd ELM327Drive/
+cd ELM327Drive/dashboard
 
 python3 main.py
 ```

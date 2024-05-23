@@ -1,3 +1,6 @@
+- [ ] Adapt screen size to android
+- [ ] Log time requrired to get data from elm327
+- [ ] Rry mode 8 for actuators
 - [ ] Edge case handling, any button pressed after any
 - [ ] Save CSV File
 - [ ] Tab to plot the graph 
