@@ -37,6 +37,9 @@ class ELM327:
 			# Headers off, for format recognition.
 			Response = self.GetResponse(b'AT H0\r')
 
+			# Timeout = hh X 4ms, for faster communications.
+			Response = self.GetResponse(b'AT ST 01\r')
+
 			# Set CAN communication protocol to ISO 9141-2 or auto detect on fail.
 			# Response = self.GetResponse(b'AT SP A3\r')
 
@@ -96,11 +99,15 @@ class ELM327:
 		b = int(rpm.split()[3], 16)
 		rpm_val = (256 * a + b) / 4
 		infograph_data["rpm"] = rpm_val
-
+		
 		# Speed
 		speed = self.GetResponse(b'01 0D\r')
 		speed_val = int(speed.split()[2], 16)
 		infograph_data["speed"] = speed_val
+		
+		# Coolant temp
+		coolant_temp = self.GetResponse(b'01 05\r')
+		infograph_data["coolant_temp"] = int(coolant_temp.split()[2], 16) - 40
 
 		# Air Fuel Ratio
 		air_fuel_ratio = self.GetResponse(b'01 44\r')
@@ -138,10 +145,6 @@ class ELM327:
 		b = int(air_flow_rate.split()[3], 16)
 		air_flow_rate_val = 2.56 * a + 0.01 * b
 		infograph_data["air_flow_rate"] = air_flow_rate_val
-
-		# Coolant temp
-		coolant_temp = self.GetResponse(b'01 05\r')
-		infograph_data["coolant_temp"] = int(coolant_temp.split()[2], 16) - 40
 
 		infograph_data = {key: round(value, 2) for key, value in infograph_data.items()}
 

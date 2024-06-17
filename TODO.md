@@ -1,8 +1,10 @@
 - [x] Adapt screen size to android
-- [ ] Updated readme with media
-- [ ] Log time requrired to get data from elm327
+- [x] 01 added for ech message to get single response
+- [x] Log time requrired to get data from elm327
+- [x] Updated readme with media (higher data rate)
 - [ ] Try mode 8 for actuators
-- [ ] AT MA method, for all std and non-std PIDs
+- [x] AT MA method, for all std and non-std PIDs	
+	- [ ] decode the messages
 - [ ] Edge case handling, any button pressed after any
 - [ ] Save CSV File
 - [ ] Tab to plot the graph 

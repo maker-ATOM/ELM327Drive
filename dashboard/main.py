@@ -4,6 +4,7 @@ import time
 
 from PyQt5.QtWidgets import QMainWindow, QApplication 
 from PyQt5.QtCore import QTimer
+from PyQt5.QtCore import Qt
 import qtmodern
 from qtmodern import styles
 from qtmodern import windows
@@ -30,6 +31,8 @@ class OBDSniffGUI(QMainWindow, dashboard_ui.Ui_MainWindow):
 		self.timer = QTimer(self)
 
 		self.timer.timeout.connect(self.getDataStream)
+
+		self.setFixedSize(self.size().width(), self.size().height())
   
 	def getDataStream(self):
 		infograph_data = self.elm327.getData()
@@ -50,7 +53,7 @@ class OBDSniffGUI(QMainWindow, dashboard_ui.Ui_MainWindow):
 		self.coolant_temp.setText(str(infograph_data["coolant_temp"]))
 
 	def start(self):
-		self.timer.start(50)
+		self.timer.start(10)
 		self.log_view.addItem(f"=> Fetching data ...")
 		self.stopButton.setEnabled(True)
 
