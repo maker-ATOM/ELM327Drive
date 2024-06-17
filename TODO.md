@@ -1,6 +1,8 @@
-- [ ] Adapt screen size to android
+- [x] Adapt screen size to android
+- [ ] Updated readme with media
 - [ ] Log time requrired to get data from elm327
-- [ ] Rry mode 8 for actuators
+- [ ] Try mode 8 for actuators
+- [ ] AT MA method, for all std and non-std PIDs
 - [ ] Edge case handling, any button pressed after any
 - [ ] Save CSV File
 - [ ] Tab to plot the graph 
